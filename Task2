@@ -1,0 +1,45 @@
+println("=====---- 1 -----=====")
+var x = readln("")
+if (x == "СЕНО" || x == "сено" || x == "это сено") {
+    println("Это сенООООООООООООООООООООООООООООООООООООО")
+}
+else {
+    println("Это не сенОООООООООООООООООООООООООООООООООООООО")
+}
+println("=====----- 2 -----=====")
+var y = readInt("")
+println("=====----- 3 -----=====")
+var s3 : Seq[Int] = Seq(y,y*2, y+1, y/2)
+println(s3)
+s3 = 1 +: s3
+println(s3)
+s3 = s3 :+ 2
+println(s3)
+println("=====----- 4 -----=====")
+for (i <- 0 to s3.size-1) {
+    println(i+" - "+s3(i))
+}
+println("=====----- 5 -----=====")
+def def5 (a : Int, b : Int) : Boolean = {
+    a == b || a == b*2
+}
+println("def5 = "+def5(readInt("A"), readInt("B")))
+println("=====----- 6 -----=====") //6)Создайте функцию которая принимает число a, строку s, Возвращает "длиннее" если s длиннее чем a, "равно" если длинна s равна a, "короче" если длинна s меньше чем а
+def sch (str6 : String, int6 : String) : String = {
+    var strs = str6.size
+    var ints = int6.size
+    var x = ""
+    if (strs > ints) {
+        x = "> Длиннее >"
+    }
+    else if (strs == ints) {
+        x = "= Равно = "
+    }
+    else if (strs < ints) {
+        x = "< Короче <"
+    }
+    x
+}
+var str6 = readln("str 6")
+var int6 = readln("int 6")
+println(sch(str6, int6))
